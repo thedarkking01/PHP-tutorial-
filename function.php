@@ -79,3 +79,29 @@ function factorial($n) {
 
 echo factorial(5); // 5 * 4 * 3 * 2 * 1
 ?>
+
+
+
+<!-- Nested Function -->
+<?php
+function calculator($a, $b) {
+    echo "Outer function: Calculating sum and product.<br>";
+
+    // Define a nested function to calculate the sum
+    function sum($x, $y) {
+        return $x + $y;
+    }
+
+    // Define a nested function to calculate the product
+    function product($x, $y) {
+        return $x * $y;
+    }
+
+    // Call nested functions
+    echo "Sum: " . sum($a, $b) . "<br>";
+    echo "Product: " . product($a, $b) . "<br>";
+}
+
+// Call the outer function
+calculator(4, 5);
+?>
